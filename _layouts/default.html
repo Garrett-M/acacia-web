@@ -3,12 +3,18 @@
     {% include head.html %}
     <body>
         {% include header.html %}
-        <div class="banner" style="background-image:url('{{ page.banner }}')">
+        <div class="banner" style="background-image:url('{{ page.banner.img | prepend: site.baseurl }}')">
             <div class="overlay">
                 <h1 class="banner-text">
-                    <div class="fraternity-title">Acacia Fraternity</div>
+                    {% if page.banner.text != null %}
+                    <div class="banner-title">
+                        {{ page.banner.text }}
+                    </div>
+                    {% else %}
+                    <div class="banner-title">Acacia Fraternity</div>
                     <div class="at">at</div>
-                    <img alt="University of Washington" src="./assets/uwlogo-white.png" />
+                    <img class="uw-logo" alt="University of Washington" src="./assets/uwlogo-white.png" />
+                    {% endif %}
                 </div>
             </div>
         </div>

@@ -7,7 +7,7 @@ facebook: https://www.facebook.com/UWacacia/
 twitter: http://twitter.com/acaciauw
 description: "Official page of the Acacia Fraternity at the University of Washington"
 keywords: "Acacia UW University Washington Seattle Fraternity AKAK AK Brotherhood"
-baseurl: ""
+baseurl: "/acacia-web"
 url: "http://washingtonacacia.org/"
 
 # Build settings

@@ -1,6 +1,9 @@
 ---
 layout: page
 title: About
+banner:
+    img: /assets/mountain.jpg
+    text: About Acacia
 permalink: /about/
 ---
 
