@@ -68,13 +68,14 @@ a {
   font-size: inherit;
   font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
   width: 100%;
+  margin: 0;
   padding-bottom: 15px;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%); }
   .banner-text div {
-    margin-bottom: 15px; }
+    margin-bottom: 10px; }
 
 .navbar-toggle {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
