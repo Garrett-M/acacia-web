@@ -43,7 +43,6 @@ body
 
 .navbar-brand
   padding: 7.5px
-  transition: background-color 0.15s
 
   &:hover,:focus
     background-color: #eee
@@ -258,8 +257,11 @@ a.thumbnail
     font-size: 1.5em
     color: #666666 - #222
 
-  ul
+  &>ul
     font-size: 0.85em
+    margin-bottom: 2.5px
+
+  ul
     list-style: none
 
   li.active>a

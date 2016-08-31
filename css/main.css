@@ -28,8 +28,7 @@ body {
   max-height: 100%; }
 
 .navbar-brand {
-  padding: 7.5px;
-  transition: background-color 0.15s; }
+  padding: 7.5px; }
   .navbar-brand:hover, .navbar-brand :focus {
     background-color: #eee; }
 
@@ -218,8 +217,10 @@ a.thumbnail.active, a.thumbnail:focus, a.thumbnail:hover {
     font-weight: 600;
     font-size: 1.5em;
     color: #444444; }
-  .sidenav ul {
+  .sidenav > ul {
     font-size: 0.85em;
+    margin-bottom: 2.5px; }
+  .sidenav ul {
     list-style: none; }
   .sidenav li.active > a {
     color: #666666; }
