@@ -2,7 +2,7 @@
 layout: home
 banner:
     img: /assets/banner.jpg
-title: Acacia Fraternity UW
+title: Home | Acacia Fraternity UW
 gallery:
     -
         url: /assets/working.jpg

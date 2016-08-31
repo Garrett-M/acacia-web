@@ -1,4 +1,8 @@
+{% if include.is_section == "true" %}
 <section class="address">
+{% else %}
+<div class="address">
+{% endif %}
     <h2>House Info</h2>
     <div>Acacia Fraternity</div>
     <div>4746 16th Ave NE</div>
@@ -8,4 +12,8 @@
             Open in Google Maps <i class="fa fa-map-marker" aria-hidden="true"></i>
         </a>
     </div>
+{% if include.is_section != "true" %}
+</div>
+{% else %}
 </section>
+{% endif %}

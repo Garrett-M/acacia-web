@@ -8,8 +8,8 @@ layout: default
             {{ content }}
         </section>
         <div class="col col-sm-3">
-            {% include social.html %}
-            {% include house.html %}
+            {% include social.html is_section="true" %}
+            {% include house.html is_section="true" %}
         </div>
     </div>
     {% include gallery.html %}

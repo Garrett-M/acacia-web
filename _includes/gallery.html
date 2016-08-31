@@ -3,7 +3,7 @@
     <div class="row">
     {% for img in page.gallery | shift(3) %}
        <div class="col-sm-4">
-            <a rel="gallery" title="{{ img.title }}" href="{{ img.url | prepend: site.baseurl }}" class="thumbnail">
+            <a title="{{ img.title }}" href="{{ img.url | prepend: site.baseurl }}" class="thumbnail">
                 <img alt="{{ img.title }}" src="{{ img.url | prepend: site.baseurl }}"/>
             </a>
         </div>

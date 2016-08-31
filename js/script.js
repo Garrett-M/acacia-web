@@ -4,6 +4,6 @@ $(document).ready(function() {
             title: {
                 type: 'over'
             }
-        }
+        },
     });
 });

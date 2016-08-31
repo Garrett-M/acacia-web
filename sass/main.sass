@@ -12,6 +12,7 @@ $serif-font: 'EB Garamond', serif
 body
   padding-top: 50px
   font-family: $main-font
+  overflow-x: hidden
 
 .navbar-acacia
   border: none
@@ -113,19 +114,12 @@ a
   background-color: rgba(255,255,255,0.6)
   width: 100%
 
-.page-content
+.outer-wrap
   max-width: 1024px
   margin: auto
 
 .wrap
   margin: 0 $section-padding
-
-.content h2
-  color: $primary
-  font-style: italic
-  margin-top: $section-padding
-  margin-bottom: 20px
-  font-size: 1.5em
 
 .content
   color: #666666
@@ -134,20 +128,39 @@ a
   text-align: justify
   line-height: 2em
 
-  margin-bottom: $section-padding
+  margin-bottom: $section-padding / 2
+  padding: $section-padding / 2 0
+
+  h2
+    color: $primary
+    font-style: italic
+    margin-bottom: $section-padding / 2
+    font-size: 1.5em
+
 
 .col
   &:first-child
     padding-left: 0
 
-    @media (min-width: 768px)
-      padding-right: $section-padding
-      // border-right: 1px solid #eee
   &:last-child
     padding-right: 0
     padding-left: 0
 
-    @media (min-width: 768px)
+.col-sm-3:first-child
+  @media (max-width: 767px)
+    .sidenav
+      border-bottom: 1px solid #eee
+      padding-bottom: $section-padding / 2
+
+    overflow: hidden
+    padding-bottom: $section-padding / 4
+
+.col-sm-9
+  @media (min-width: 768px)
+    &:first-child
+      padding-right: $section-padding * 2
+
+    &:last-child
       padding-left: $section-padding
 
 .social a
@@ -184,8 +197,7 @@ a
   color: #8f8f8f
   font-variant: small-caps
 
-  margin-top: $section-padding
-  padding: $section-padding
+  padding: $section-padding / 2 $section-padding $section-padding
 
   a
     text-decoration: none
@@ -196,16 +208,9 @@ a
     &:hover
       color: $secondary - #222
 
-  >:first-child>h2
-    margin-top: 0
-
-  @media (min-width: 768px)
-    h2
-      margin-top: 0
-
-    .page-content>*
-      float: left
-      padding-right: $section-padding
+  .outer-wrap>*
+    float: left
+    padding-right: $section-padding
 
 .photos
   overflow: hidden
@@ -229,6 +234,46 @@ a.thumbnail
   border-right: none
   border-radius: 0
   padding: 10.5px
-  height: 40px
+  min-height: 40px
   margin-bottom: 0
   width: 100%
+
+.anchor-name
+  display: block
+  position: relative
+  top: -105px
+  visibility: hidden
+
+.fancybox-lock .fancybox-overlay
+  overflow-x: hidden
+
+.sidenav
+  font-family: $main-font
+  text-transform: uppercase
+  font-weight: 600
+  line-height: 1.75em
+
+  h3
+    font-weight: 600
+    font-size: 1.5em
+    color: #666666 - #222
+
+  ul
+    font-size: 0.85em
+    list-style: none
+
+  li.active>a
+    color: #666666
+  a
+    color: #666666 + #444
+
+    &:hover
+      color: $secondary + #222 !important
+      text-decoration: none
+
+  .first-level
+    padding-left: 0
+
+  .second-level
+    padding-left: $section-padding / 2
+    font-size: 0.8em
