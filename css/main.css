@@ -139,7 +139,7 @@ a {
   font-size: 0.8em;
   vertical-align: middle; }
 
-.address {
+.address, .social {
   line-height: 1.5em; }
 
 .fa-facebook-square {
@@ -166,9 +166,9 @@ a {
   padding: 20px 40px 40px; }
   .site-footer a {
     text-decoration: none; }
-  .site-footer .address a {
+  .site-footer .address a, .site-footer .social a {
     color: inherit; }
-    .site-footer .address a:hover {
+    .site-footer .address a:hover, .site-footer .social a:hover {
       color: #ad8400; }
   .site-footer .outer-wrap > * {
     float: left;
@@ -234,5 +234,27 @@ a.thumbnail.active, a.thumbnail:focus, a.thumbnail:hover {
   .sidenav .second-level {
     padding-left: 20px;
     font-size: 0.8em; }
+
+#gmap_canvas_container {
+  margin: 40px 0;
+  padding: 0;
+  height: 500px;
+  overflow: hidden;
+  border: 1px solid #ddd;
+  border-radius: 4px; }
+
+#gmap_canvas {
+  height: 500px;
+  width: 100%; }
+
+#gmap_canvas img {
+  max-width: none !important;
+  background: none !important; }
+
+.grid {
+  margin: 40px 0 60px; }
+
+.contact-info {
+  line-height: 1.7; }
 
 /*# sourceMappingURL=main.css.map */

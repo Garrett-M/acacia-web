@@ -3,15 +3,37 @@
 {% else %}
 <div class="social">
 {% endif %}
-    <h2>Contact Us</h2>
+    <h2>
+        {% if include.text == null %}
+        Contact Us
+        {% else %}
+        {{ include.text }}
+        {% endif %}
+    </h2>
     {% for platform in site.social %}
     <div>
-        <a {% if platform.prefix == null %} target="_blank" {% endif%} href="{{ platform.link  | prepend: platform.prefix }}">
+        <a target="_blank" href="{{ platform.link }}">
             <i class="fa {{ platform.icon }} fa-fw" aria-hidden="true"></i>
             <span class="social-text"> {{ platform.text }}</span>
         </a>
     </div>
     {% endfor %}
+    {% if site.email != null and include.show_email != 'false' %}
+    <div>
+        <a href="mailto:{{ site.email.link }}">
+            <i class="fa {{ site.email.icon }} fa-fw" aria-hidden="true"></i>
+            <span class="social-text"> {{ site.email.text }}</span>
+        </a>
+    </div>
+    {% endif %}
+    {% if site.phone != null and include.show_phone != 'false' %}
+    <div>
+        <a href="tel:{{ site.phone.link }}">
+            <i class="fa {{ site.phone.icon }} fa-fw" aria-hidden="true"></i>
+            <span class="social-text"> {{ site.phone.text }}</span>
+        </a>
+    </div>
+    {% endif %}
 {% if include.is_section != "true" %}
 </div>
 {% else %}

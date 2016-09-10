@@ -9,16 +9,14 @@ social:
     text: Twitter
     link: http://twitter.com/acaciauw
     icon: fa-twitter-square
-  -
-    text: Email
-    link: uw23@acacia.org
-    prefix: 'mailto:'
-    icon: fa-envelope-square
-  -
-    text: (425) 736-9102
-    link: 14257369102
-    prefix: 'tel:'
-    icon: fa-phone-square
+email:
+  text: uw23@acacia.org
+  link: uw23@acacia.org
+  icon: fa-envelope-square
+phone:
+  text: (425) 736-9102
+  link: 14257369102
+  icon: fa-phone-square
 description: "Official page of the Acacia Fraternity at the University of Washington"
 keywords: "Acacia UW University Washington Seattle Fraternity AKAK AK Brotherhood"
 baseurl: "/acacia-web"
@@ -27,3 +25,14 @@ url: "http://washingtonacacia.org"
 # Build settings
 markdown: kramdown
 permalink: pretty
+
+# Compress settings
+compress_html:
+  clippings: all
+  comments: ["<!-- ", " -->"]
+  endings: all
+  ignore:
+    envs: [local]
+  blanklines: false
+  profile: false
+  startings: [html, head, body]
