@@ -3,13 +3,13 @@ layout: default
 ---
 <div class="content clearfix">
     <div class="col col-sm-3">
-        <nav class="sidenav">
+        <nav class="sidenav b-border-sm">
             <h3>{{ page.nav.title }}</h3>
             <ul class="first-level">
                 {% for item in page.nav.items %}
                 <li {% if page.url contains item.link %}class="active"{% endif %}>
                     <a href="{{ item.link | prepend: site.baseurl }}">{{ item.text }}</a>
-                    {% if item.children != null %}
+                    {% if item.children %}
                         <ul class="second-level">
                         {% for subitem in item.children %}
                             <li><a href="{% if subitem.link contains '#' %}{{ subitem.link }}{% else %}{{ subitem.link | prepend: site.baseurl }}{% endif %}">{{ subitem.text }}</a></li>

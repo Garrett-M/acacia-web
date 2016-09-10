@@ -1,0 +1,126 @@
+---
+layout: default
+banner:
+    img: /assets/house.png
+    text: Current Members
+title: Current Members | Acacia Fraternity UW
+executives:
+    -
+        title: President
+        name: Austin Seely
+        year: Junior
+        email: austinseely@live.com
+    -
+        title: Vice President
+        name: Corey Rogers
+    -
+        title: Social Chair
+        name: Terrance Steenman
+        year: Sophomore
+        major: Architecural Design, Construction Management
+        phone: (425) 749-8961
+        phone-link: 'tel:14257498961'
+        email: tsteen96@gmail.com
+    -
+        title: Risk Manager
+        name: Spencer Kelly
+    -
+        title: Treasurer
+        name: Ernie Tao
+        phone: (555) 555-5555
+        phone-link: tel:15555555555
+    -
+        title: Secretary
+        name: Harbin Gado
+officers:
+    -
+        title: Vice President of Social Media
+        name: Garrett Marconet
+    -
+        title: Associate Dean
+        name: Corey Rogers
+    -
+        title: Junior Dean
+        name: Terry Steenman
+        phone: (555) 555-5555
+        phone-link: tel:15555555552
+    -
+        title: Treasurer
+        name: Ernie Tao
+        phone: (555) 555-5555
+        phone-link: tel:15555555555
+    -
+        title: Secretary
+        name: Harbin Gado
+members:
+    -
+        title: Venerable Dean
+        name: Austin Seely
+    -
+        title: Associate Dean
+        name: Corey Rogers
+    -
+        title: Junior Dean
+        name: Terry Steenman
+        phone: (555) 555-5555
+        phone-link: tel:15555555552
+    -
+        title: Treasurer
+        name: Ernie Tao
+        phone: (555) 555-5555
+        phone-link: tel:15555555555
+    -
+        title: Secretary
+        name: Harbin Gado
+---
+
+<div class="content">
+    <div class="clearfix b-border">
+        <h2>Executives</h2>
+        <div class="row">
+            {% for mem in page.executives %}
+            <div class="col-sm-6 col-md-3 member-entry border">
+                <h3>{{ mem.name }}</h3>
+                {% if mem.img %}<img src="{{ mem.img }}" class="member-img"/>{% endif %}
+                <div>{{ mem.title }}</div>
+                {% if mem.year %}<div>{{ mem.year }}</div>{% endif %}
+                {% if mem.major %}<div>{{ mem.major }}</div>{% endif %}
+                {% if mem.phone %}<div><a href="tel:{{ mem.phone-link }}">{{ mem.phone }}</a></div>{% endif %}
+                {% if mem.email %}<div><a href="mailto:{{ mem.email }}">{{ mem.email }}</a></div>{% endif %}
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="clearfix b-border">
+        <h2>Officers</h2>
+        <div class="row">
+            {% for mem in page.officers %}
+            <div class="col-sm-6 col-md-3 member-entry border">
+                <h3>{{ mem.name }}</h3>
+                {% if mem.img %}<img src="{{ mem.img }}" class="member-img"/>{% endif %}
+                <div>{{ mem.title }}</div>
+                {% if mem.year %}<div>{{ mem.year }}</div>{% endif %}
+                {% if mem.major %}<div>{{ mem.major }}</div>{% endif %}
+                {% if mem.phone %}<div><a href="tel:{{ mem.phone-link }}">{{ mem.phone }}</a></div>{% endif %}
+                {% if mem.email %}<div><a href="mailto:{{ mem.email }}">{{ mem.email }}</a></div>{% endif %}
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="clearfix b-border">
+        <h2>Other Members</h2>
+        <div class="row">
+            {% for mem in page.members %}
+            <div class="col-sm-6 col-md-3 member-entry border">
+                <h3>{{ mem.name }}</h3>
+                {% if mem.img %}<img src="{{ mem.img }}" class="member-img"/>{% endif %}
+                <div>{{ mem.title }}</div>
+                {% if mem.year %}<div>{{ mem.year }}</div>{% endif %}
+                {% if mem.major %}<div>{{ mem.major }}</div>{% endif %}
+                {% if mem.phone %}<div><a href="tel:{{ mem.phone-link }}">{{ mem.phone }}</a></div>{% endif %}
+                {% if mem.email %}<div><a href="mailto:{{ mem.email }}">{{ mem.email }}</a></div>{% endif %}
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>

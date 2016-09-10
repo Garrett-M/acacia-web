@@ -4,10 +4,10 @@
 <div class="social">
 {% endif %}
     <h2>
-        {% if include.text == null %}
-        Contact Us
-        {% else %}
+        {% if include.text %}
         {{ include.text }}
+        {% else %}
+        Contact Us
         {% endif %}
     </h2>
     {% for platform in site.social %}
@@ -18,7 +18,7 @@
         </a>
     </div>
     {% endfor %}
-    {% if site.email != null and include.show_email != 'false' %}
+    {% if site.email and include.show_email != 'false' %}
     <div>
         <a href="mailto:{{ site.email.link }}">
             <i class="fa {{ site.email.icon }} fa-fw" aria-hidden="true"></i>
@@ -26,7 +26,7 @@
         </a>
     </div>
     {% endif %}
-    {% if site.phone != null and include.show_phone != 'false' %}
+    {% if site.phone and include.show_phone != 'false' %}
     <div>
         <a href="tel:{{ site.phone.link }}">
             <i class="fa {{ site.phone.icon }} fa-fw" aria-hidden="true"></i>

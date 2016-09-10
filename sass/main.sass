@@ -162,6 +162,20 @@ a
     &:last-child
       padding-left: $section-padding
 
+.b-border-sm
+  @media (max-width: 767px)
+    border-bottom: 1px solid #eee
+    padding-bottom: $section-padding / 2
+
+.b-border-sm-a
+  @media (min-width: 768px)
+    border-bottom: 1px solid #eee
+    padding-bottom: $section-padding / 2
+
+.b-border
+  border-bottom: 1px solid #eee
+  padding-bottom: $section-padding / 2
+
 .social a
   text-decoration: none
   font-family: $main-font
@@ -286,23 +300,36 @@ a.thumbnail
 #gmap_canvas_container
   margin: $section-padding 0 ($section-padding / 2)
   padding: 0
-  height: 500px
+  height: 210px
   overflow: hidden
+
+#border
   border: 1px solid #ddd
   border-radius: 4px
 
 #gmap_canvas
-  height: 500px
+  height: 210px
   width: 100%
 
 #gmap_canvas img
   max-width: none !important
   background: none !important
 
-.grid
-  margin: $section-padding 0 ($section-padding + 20px)
+.house-container
+  @media (min-width: 768px)
+    margin-bottom: ($section-padding + 20px)
+  margin-top: $section-padding
 
 .contact-info
+  @media (min-width: 768px)
+    height: 200px
+    margin-top: 0
+    margin-bottom: 0
   line-height: 1.7
+  margin-top: $section-padding
+
+  &:not(:last-child), &:first-child
+    margin-bottom: $section-padding / 2
+
+.grid
   margin-top: $section-padding / 2
-  margin-bottom: $section-padding / 2
