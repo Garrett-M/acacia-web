@@ -8,22 +8,21 @@ contacts:
     -
         title: President
         name: Austin Seely
-        email: loligators@changethis.com
+        email: austinseely@live.com
     -
         title: Vice President
         name: Corey Rogers
     -
-        title: Social Chair
+        title: Social Chairman
         name: Terrance Steenman
         phone: (425) 749-8961
         phone-link: 'tel:14257498961'
         email: tsteen96@gmail.com
     -
-        title: Recruitment Chair
+        title: Recruitment Chairman
         name: Jared Christensen
         phone: (425) 736-9102
         phone-link: tel:14257369102
-        email: swolldaddy@changethis.com
         facebook: https://www.facebook.com/jared.christenson.54
     -
         title: Chapter Advisor
@@ -36,10 +35,10 @@ contacts:
         phone: (555) 555-5555
         phone-link: tel:15555555555
 ---
-<div class="content">
+<div class="grid-content">
     <div class="clearfix b-border-sm-a">
         <div class="col col-sm-9">
-            <div id="gmap_canvas_container">
+            <div id="gmap_canvas_container" class="border">
                 <div id="gmap_canvas">
                 </div>
             </div>
@@ -56,10 +55,11 @@ contacts:
             {% for entry in page.contacts %}
             <section class="col-sm-6 col-md-3 contact-info">
                 <h2>{{ entry.title }}</h2>
-                <div>{{ entry.name }}</div>
-                {% if entry.phone %}<div><a href="{{ entry.phone-link }}">{{ entry.phone }}</a></div>{% endif %}
-                {% if entry.email %}<div><a href="mailto:{{ entry.email }}">{{ entry.email }}</a></div>{% endif %}
-                {% if entry.facebook %}<div><a href="{{ entry.facebook }}"><i class="fa fa-facebook-square fa-fw" aria-hidden="true"></i> Facebook</a></div>{% endif %}
+                <h3>{{ entry.name }}</h3>
+                {% if entry.facebook %}<div class="facebook"><a href="{{ entry.facebook }}"><i class="fa fa-facebook-square" aria-hidden="true"></i> Facebook</a></div>{% endif %}
+                {% if entry.twitter%}<div class="twitter"><a href="{{ entry.twitter }}"><i class="fa fa-twitter-square" aria-hidden="true"></i> Twitter</a></div>{% endif %}
+                {% if entry.email %}<div class="email"><a href="mailto:{{ entry.email }}"><i class="fa fa-envelope-square" aria-hidden="true"></i> {{ entry.email }}</a></div>{% endif %}
+                {% if entry.phone %}<div class="phone"><a href="{{ entry.phone-link }}"><i class="fa fa-phone-square" aria-hidden="true"></i> {{ entry.phone }}</a></div>{% endif %}
             </section>
             {% endfor %}
         </div>

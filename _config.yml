@@ -3,18 +3,22 @@ title: Acacia Fraternity UW
 social:
   -
     text: Facebook
+    class: facebook
     link: https://www.facebook.com/UWacacia/
     icon: fa-facebook-square
   -
     text: Twitter
+    class: twitter
     link: http://twitter.com/acaciauw
     icon: fa-twitter-square
 email:
   text: austinseely@live.com
+  class: email
   link: austinseely@live.com
   icon: fa-envelope-square
 phone:
   text: (425) 749-8961
+  class: phone
   link: 14257498961
   icon: fa-phone-square
 description: "Official page of the Acacia Fraternity at the University of Washington"

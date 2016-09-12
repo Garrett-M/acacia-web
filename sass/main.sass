@@ -53,12 +53,13 @@ a
   &:hover
     color: $secondary - #222
 
+.cover
+  background-position: 50% 33%
+  background-size: cover
 
 .banner
   width: 100%
   height: 300px
-  background-position: 50% 33%
-  background-size: cover
 
   .overlay
     height: 100%
@@ -181,8 +182,10 @@ a
   font-family: $main-font
 
 .social-text
-  font-size: 0.8em
-  vertical-align: middle
+  vertical-align: top
+
+  &.small
+    font-size: 0.8em
 
 .address
   line-height: 1.5em
@@ -190,19 +193,16 @@ a
 .social
   @extend .address
 
-.fa-facebook-square
+.facebook i
   color: #3b5998
 
-.fa-twitter-square
+.twitter i
   color: #00aced
 
-.fa-envelope-square
+.email i
   color: #22b900
 
-.fa-envelope-square
-  color: #22b900
-
-.fa-phone-square
+.phone i
   color: #ce2020
 
 .site-footer
@@ -303,7 +303,7 @@ a.thumbnail
   height: 210px
   overflow: hidden
 
-#border
+.border
   border: 1px solid #ddd
   border-radius: 4px
 
@@ -328,8 +328,60 @@ a.thumbnail
   line-height: 1.7
   margin-top: $section-padding
 
+  h3
+    font-size: 1.1em
+    margin-top: 10px
+
   &:not(:last-child), &:first-child
     margin-bottom: $section-padding / 2
 
 .grid
-  margin-top: $section-padding / 2
+  @media (min-width: 768px)
+    margin-top: $section-padding / 2
+
+  margin-bottom: $section-padding
+
+%grid-header
+  font-size: 1.75em
+  font-weight: 600
+  color: 2 * $primary
+
+.member-entry
+  min-height: 400px
+  padding: $section-padding / 2
+  margin-bottom: 30px
+  font-family: $main-font
+  font-size: (1em / 1.3em) * 0.9em
+  text-transform: uppercase
+  text-align: left
+  line-height: 1.15em
+
+
+  > div:not(:last-child)
+    margin-bottom: .85em
+
+  h3
+    @extend %grid-header
+    margin-top: 0
+    margin-bottom: $section-padding / 2
+
+.facebook, .twitter, .phone, .email
+  white-space: nowrap
+  text-overflow: ellipsis
+  overflow: hidden
+
+  i
+    margin-right: 3px
+
+.member-img
+  height: 150px
+  margin: 0 (-$section-padding / 2) ($section-padding / 2) !important
+
+.grid-content
+  text-transform: uppercase
+  font-size: 0.9em
+
+  h2
+    @extend %grid-header
+
+

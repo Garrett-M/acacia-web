@@ -6,15 +6,16 @@ banner:
 title: Current Members | Acacia Fraternity UW
 executives:
     -
-        title: President
+        title: Venerable Dean
         name: Austin Seely
         year: Junior
         email: austinseely@live.com
     -
-        title: Vice President
+        title: Senior Dean
         name: Corey Rogers
+        year: Junior
     -
-        title: Social Chair
+        title: Junior Dean
         name: Terrance Steenman
         year: Sophomore
         major: Architecural Design, Construction Management
@@ -22,104 +23,91 @@ executives:
         phone-link: 'tel:14257498961'
         email: tsteen96@gmail.com
     -
-        title: Risk Manager
+        title: Executive Dean
         name: Spencer Kelly
+        year: Senior
+    -
+        title: Recruitment Chairman
+        name: Jared Christensen
+        year: Junior
+        phone: (425) 736-9102
+        phone-link: tel:14257369102
+        facebook: https://www.facebook.com/jared.christenson.54
     -
         title: Treasurer
         name: Ernie Tao
-        phone: (555) 555-5555
-        phone-link: tel:15555555555
+        year: Junior
     -
         title: Secretary
         name: Harbin Gado
+        year: Junior
 officers:
+    -
+        title: Philanthropy Chairman
+        name: Suyash Hiray
+        year: Junior
+        major: Bio Physics
+        phone: (253) 486-2108
+        phone-link: 12534862108
+        email: suyashh@uw.edu
+    -
+        title: Academic Chairman
+        name: Justace Buhl Brennan
+        year: Senior
+    -
+        title: Intermural Chairman
+        name: William Elzemeyer
+        year: Junior
     -
         title: Vice President of Social Media
         name: Garrett Marconet
-    -
-        title: Associate Dean
-        name: Corey Rogers
-    -
-        title: Junior Dean
-        name: Terry Steenman
-        phone: (555) 555-5555
-        phone-link: tel:15555555552
-    -
-        title: Treasurer
-        name: Ernie Tao
-        phone: (555) 555-5555
-        phone-link: tel:15555555555
-    -
-        title: Secretary
-        name: Harbin Gado
+        img: '/assets/garrett-marconet.jpg'
+        year: Junior
+        major: Computer Engineering
+        facebook: https://www.facebook.com/gmarconet
 members:
     -
-        title: Venerable Dean
-        name: Austin Seely
+        name: Andrei Toader
+        year: Sophomore
     -
-        title: Associate Dean
-        name: Corey Rogers
+        name: Cameron Lerner
+        year: Sophomore
     -
-        title: Junior Dean
-        name: Terry Steenman
-        phone: (555) 555-5555
-        phone-link: tel:15555555552
+        name: Jake Hammond
+        year: Junior
     -
-        title: Treasurer
-        name: Ernie Tao
-        phone: (555) 555-5555
-        phone-link: tel:15555555555
+        name: Logan Guillet
+        year: Junior
     -
-        title: Secretary
-        name: Harbin Gado
+        name: Thomas Maxwell Kern
+        year: Sophomore
+    -
+        name: Tristan Perry
+        year: Sophomore
 ---
 
 <div class="content">
     <div class="clearfix b-border">
         <h2>Executives</h2>
         <div class="row">
-            {% for mem in page.executives %}
-            <div class="col-sm-6 col-md-3 member-entry border">
-                <h3>{{ mem.name }}</h3>
-                {% if mem.img %}<img src="{{ mem.img }}" class="member-img"/>{% endif %}
-                <div>{{ mem.title }}</div>
-                {% if mem.year %}<div>{{ mem.year }}</div>{% endif %}
-                {% if mem.major %}<div>{{ mem.major }}</div>{% endif %}
-                {% if mem.phone %}<div><a href="tel:{{ mem.phone-link }}">{{ mem.phone }}</a></div>{% endif %}
-                {% if mem.email %}<div><a href="mailto:{{ mem.email }}">{{ mem.email }}</a></div>{% endif %}
-            </div>
+            {% for member in page.executives %}
+                {% include member-entry.html member=member %}
             {% endfor %}
         </div>
     </div>
     <div class="clearfix b-border">
         <h2>Officers</h2>
         <div class="row">
-            {% for mem in page.officers %}
-            <div class="col-sm-6 col-md-3 member-entry border">
-                <h3>{{ mem.name }}</h3>
-                {% if mem.img %}<img src="{{ mem.img }}" class="member-img"/>{% endif %}
-                <div>{{ mem.title }}</div>
-                {% if mem.year %}<div>{{ mem.year }}</div>{% endif %}
-                {% if mem.major %}<div>{{ mem.major }}</div>{% endif %}
-                {% if mem.phone %}<div><a href="tel:{{ mem.phone-link }}">{{ mem.phone }}</a></div>{% endif %}
-                {% if mem.email %}<div><a href="mailto:{{ mem.email }}">{{ mem.email }}</a></div>{% endif %}
-            </div>
+            {% for member in page.officers %}
+                {% include member-entry.html member=member %}
             {% endfor %}
         </div>
     </div>
-    <div class="clearfix b-border">
+    <div class="clearfix">
         <h2>Other Members</h2>
         <div class="row">
-            {% for mem in page.members %}
-            <div class="col-sm-6 col-md-3 member-entry border">
-                <h3>{{ mem.name }}</h3>
-                {% if mem.img %}<img src="{{ mem.img }}" class="member-img"/>{% endif %}
-                <div>{{ mem.title }}</div>
-                {% if mem.year %}<div>{{ mem.year }}</div>{% endif %}
-                {% if mem.major %}<div>{{ mem.major }}</div>{% endif %}
-                {% if mem.phone %}<div><a href="tel:{{ mem.phone-link }}">{{ mem.phone }}</a></div>{% endif %}
-                {% if mem.email %}<div><a href="mailto:{{ mem.email }}">{{ mem.email }}</a></div>{% endif %}
-            </div>
+            {% for member in page.members %}
+                {% include member-entry.html member=member %}
             {% endfor %}
         </div>
     </div>

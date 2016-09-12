@@ -11,26 +11,26 @@
         {% endif %}
     </h2>
     {% for platform in site.social %}
-    <div>
+    <div class="{{ platform.class }}">
         <a target="_blank" href="{{ platform.link }}">
-            <i class="fa {{ platform.icon }} fa-fw" aria-hidden="true"></i>
-            <span class="social-text"> {{ platform.text }}</span>
+            <i class="fa {{ platform.icon }}" aria-hidden="true"></i>
+            <span class="social-text {% if include.is_small %}small{% endif %}"> {{ platform.text }}</span>
         </a>
     </div>
     {% endfor %}
     {% if site.email and include.show_email != 'false' %}
-    <div>
+    <div class="{{ site.email.class }}">
         <a href="mailto:{{ site.email.link }}">
-            <i class="fa {{ site.email.icon }} fa-fw" aria-hidden="true"></i>
-            <span class="social-text"> {{ site.email.text }}</span>
+            <i class="fa {{ site.email.icon }}" aria-hidden="true"></i>
+            <span class="social-text {% if include.is_small %}small{% endif %}"> {{ site.email.text }}</span>
         </a>
     </div>
     {% endif %}
     {% if site.phone and include.show_phone != 'false' %}
-    <div>
+    <div class="{{ site.phone.class }}">
         <a href="tel:{{ site.phone.link }}">
-            <i class="fa {{ site.phone.icon }} fa-fw" aria-hidden="true"></i>
-            <span class="social-text"> {{ site.phone.text }}</span>
+            <i class="fa {{ site.phone.icon }}" aria-hidden="true"></i>
+            <span class="social-text {% if include.is_small %}small{% endif %}"> {{ site.phone.text }}</span>
         </a>
     </div>
     {% endif %}
