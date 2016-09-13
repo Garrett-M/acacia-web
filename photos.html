@@ -5,21 +5,11 @@ banner:
     text: Photo Gallery
 permalink: /photos/
 title: Photo Gallery | Acacia Fraternity UW
-imgs:
-    -
-        url: /assets/gallery/gameday.jpg
-        title: Gameday
-    -
-        url: /assets/gallery/mountain.jpg
-        title: Outdoors
-    -
-        url: /assets/gallery/working.jpg
-        title: Community Service
 ---
 
 <div class="content">
     <div class="clearfix gallery row">
-        {% for image in page.imgs %}
+        {% for image in site.gallery %}
             <div class="col-sm-4">
                 <a title="{{ image.title }}" href="{{ image.url | prepend: site.baseurl }}" class="thumbnail">
                     <div class="gallery-img cover" style="background-image:url('{{ image.url | prepend: site.baseurl }}')"></div>

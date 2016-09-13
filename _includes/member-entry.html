@@ -1,11 +1,12 @@
 <div class="col-sm-6 col-md-3">
     <div class="border member-entry">
-        <h3>{{ include.member.name }}</h3>
-        {% if include.member.img %}
-            <a title="{{ include.member.name }}" href="{{ include.member.img | prepend : site.baseurl }}" class="member-img-link">
-                <div style="background-image:url('{{ include.member.img | prepend: site.baseurl }}')" class="member-img cover"></div>
-            </a>
-        {% endif %}
+        <a title="{{ include.member.name }}" href="{% if include.member.img %}{{ include.member.img | prepend : site.baseurl }}{% else %}{{ '/assets/members/no-img.jpg' | prepend: site.baseurl }}{% endif %}" class="member-img-link">
+            <div style="background-image:url('{% if include.member.img %}{{ include.member.img | prepend: site.baseurl }}{% else %}{{ '/assets/members/no-img.jpg' | prepend: site.baseurl }}{% endif %}')" class="member-img cover">
+                <div class="overlay">
+                    <h3 class="banner-text">{{ include.member.name }}</h3>
+                </div>
+            </div>
+        </a>
         <div>{{ include.member.title }}</div>
         {% if include.member.year %}<div>{{ include.member.year }}</div>{% endif %}
         {% if include.member.major %}<div>{{ include.member.major }}</div>{% endif %}

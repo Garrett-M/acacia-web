@@ -61,19 +61,19 @@ a
   width: 100%
   height: 300px
 
-  .overlay
-    height: 100%
-    width: 100%
-    background: rgba(0,0,0,0.7)
+  img
+    max-height: 4em
+    max-width: 100%
+    padding: 0 15px
 
-    text-align: center
-    position: relative
-    color: white
+.overlay
+  height: 100%
+  width: 100%
+  background: rgba(0,0,0,0.7)
 
-    img
-      max-height: 4em
-      max-width: 100%
-      padding: 0 15px
+  text-align: center
+  position: relative
+  color: white
 
 .at
   font-size: 2em
@@ -94,15 +94,14 @@ a
   top: 50%
   left: 50%
   transform: translate(-50%,-50%)
+  padding: 0 15px
+
 
   .uw-logo
     margin-bottom: 10px
 
-  div
-    padding: 0 15px
-
-    &:not(:first-child)
-      margin-top: 10px
+  div:not(:first-child)
+    margin-top: 10px
 
 .navbar-toggle
   font-family: $safe-font
@@ -365,16 +364,20 @@ a.thumbnail
   text-transform: uppercase
   text-align: left
   line-height: 1.15em
+  overflow: hidden
+
+  .overlay
+    background: rgba(0,0,0,0.5)
 
   @media (min-width: 768px)
     min-height: 375px
-    overflow: hidden
 
   > div:not(:last-child)
     margin-bottom: .85em
 
   h3
     @extend %grid-header
+    color: white
     margin-top: 0
     margin-bottom: $section-padding / 2
 
@@ -387,11 +390,9 @@ a.thumbnail
     margin-right: 3px
 
 .member-img
-  @media (min-width: 768px)
-    height: 150px
-
-  height: 50vw
-  margin: 0 (-$section-padding / 2) ($section-padding / 2) !important
+  border-radius: 4px 4px 0 0
+  height: 150px
+  margin: (-$section-padding / 2) (-$section-padding / 2) ($section-padding / 2) !important
 
 .gallery
   margin-top: $section-padding / 2
