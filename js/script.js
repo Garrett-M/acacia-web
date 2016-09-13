@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    $('.thumbnail').fancybox({
+    $('.thumbnail, .member-img-link').fancybox({
         helpers: {
             title: {
                 type: 'over'

@@ -1,7 +1,11 @@
 <div class="col-sm-6 col-md-3">
     <div class="border member-entry">
         <h3>{{ include.member.name }}</h3>
-        {% if include.member.img %}<div style="background-image:url('{{ include.member.img | prepend: site.baseurl }}')" class="member-img cover"></div>{% endif %}
+        {% if include.member.img %}
+            <a title="{{ include.member.name }}" href="{{ include.member.img | prepend : site.baseurl }}" class="member-img-link">
+                <div style="background-image:url('{{ include.member.img | prepend: site.baseurl }}')" class="member-img cover"></div>
+            </a>
+        {% endif %}
         <div>{{ include.member.title }}</div>
         {% if include.member.year %}<div>{{ include.member.year }}</div>{% endif %}
         {% if include.member.major %}<div>{{ include.member.major }}</div>{% endif %}

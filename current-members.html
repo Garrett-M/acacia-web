@@ -1,7 +1,7 @@
 ---
 layout: default
 banner:
-    img: /assets/house.png
+    img: /assets/banners/house.png
     text: Current Members
 title: Current Members | Acacia Fraternity UW
 executives:
@@ -23,7 +23,7 @@ executives:
         phone-link: 'tel:14257498961'
         email: tsteen96@gmail.com
     -
-        title: Executive Dean
+        title: Risk Management Chairman
         name: Spencer Kelly
         year: Senior
     -
@@ -41,7 +41,22 @@ executives:
         title: Secretary
         name: Harbin Gado
         year: Junior
+        major: Economics, Political Science
+        phone: (253) 306-0769
+        phone-link: 12533060769
+        email: harbin.gado@yahoo.com
 officers:
+    -
+        title: Academic Chairman
+        name: Justace Buhl Brennan
+        year: Senior
+    -
+        title: Intramural Chairman
+        name: William Elzemeyer
+        year: Junior
+        major: Earth and Space Sciences
+        phone: (307) 413-3490
+        phone-link: 13074133490
     -
         title: Philanthropy Chairman
         name: Suyash Hiray
@@ -51,43 +66,43 @@ officers:
         phone-link: 12534862108
         email: suyashh@uw.edu
     -
-        title: Academic Chairman
-        name: Justace Buhl Brennan
-        year: Senior
-    -
-        title: Intermural Chairman
-        name: William Elzemeyer
-        year: Junior
-    -
         title: Vice President of Social Media
         name: Garrett Marconet
-        img: '/assets/garrett-marconet.jpg'
+        img: '/assets/members/garrett-marconet.jpg'
         year: Junior
         major: Computer Engineering
         facebook: https://www.facebook.com/gmarconet
 members:
     -
-        name: Andrei Toader
-        year: Sophomore
-    -
-        name: Cameron Lerner
-        year: Sophomore
+        name: Logan Guillet
+        year: Junior
     -
         name: Jake Hammond
         year: Junior
     -
-        name: Logan Guillet
-        year: Junior
+        name: Max Kern
+        year: Sophomore
+        major: Computer Science
+        email: maxkern@uw.edu
     -
-        name: Thomas Maxwell Kern
+        name: Cameron Lerner
         year: Sophomore
     -
+        name: Bridger Machus
+        img: '/assets/members/bridger-machus.jpg'
+        year: Junior
+        major: Environmental Science, Resource Management
+        facebook: 'https://facebook.com/Bridger10'
+    -
         name: Tristan Perry
+        year: Sophomore
+    -
+        name: Andrei Toader
         year: Sophomore
 ---
 
 <div class="content">
-    <div class="clearfix b-border">
+    <div class="clearfix">
         <h2>Executives</h2>
         <div class="row">
             {% for member in page.executives %}
@@ -95,7 +110,7 @@ members:
             {% endfor %}
         </div>
     </div>
-    <div class="clearfix b-border">
+    <div class="clearfix">
         <h2>Officers</h2>
         <div class="row">
             {% for member in page.officers %}

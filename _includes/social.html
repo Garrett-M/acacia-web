@@ -4,11 +4,8 @@
 <div class="social">
 {% endif %}
     <h2>
-        {% if include.text %}
-        {{ include.text }}
-        {% else %}
-        Contact Us
-        {% endif %}
+        {% if include.text %}{{ include.text }}
+        {% else %}Contact Us{% endif %}
     </h2>
     {% for platform in site.social %}
     <div class="{{ platform.class }}">

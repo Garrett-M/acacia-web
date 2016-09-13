@@ -122,7 +122,7 @@ a
   margin: 0 $section-padding
 
 .content
-  color: #666666
+  color: #666
   font-family: $serif-font
   font-size: 1.3em
   text-align: justify
@@ -141,6 +141,10 @@ a
 .col
   &:first-child
     padding-left: 0
+
+    @media (max-width: 767px)
+    padding-right: 0
+
 
   &:last-child
     padding-right: 0
@@ -184,10 +188,8 @@ a
 .social-text
   vertical-align: top
 
-  &.small
-    font-size: 0.8em
-
 .address
+  color: #666
   line-height: 1.5em
 
 .social
@@ -218,6 +220,9 @@ a
   a
     text-decoration: none
 
+  .social, .address
+    color: #8f8f8f
+
   .address a
     color: inherit
 
@@ -239,6 +244,8 @@ a
   bottom: 0
 
 a.thumbnail
+  max-height: 200px
+  min-width: 100%
   &.active,&:focus,&:hover
     border-color: $secondary
 
@@ -272,7 +279,7 @@ a.thumbnail
   h3
     font-weight: 600
     font-size: 1.5em
-    color: #666666 - #222
+    color: #666 - #222
 
   &>ul
     font-size: 0.85em
@@ -282,9 +289,9 @@ a.thumbnail
     list-style: none
 
   li.active>a
-    color: #666666
+    color: #666
   a
-    color: #666666 + #444
+    color: #666 + #444
 
     &:hover
       color: $secondary + #222 !important
@@ -300,7 +307,7 @@ a.thumbnail
 #gmap_canvas_container
   margin: $section-padding 0 ($section-padding / 2)
   padding: 0
-  height: 210px
+  height: 250px
   overflow: hidden
 
 .border
@@ -308,7 +315,7 @@ a.thumbnail
   border-radius: 4px
 
 #gmap_canvas
-  height: 210px
+  height: 250px
   width: 100%
 
 #gmap_canvas img
@@ -316,20 +323,26 @@ a.thumbnail
   background: none !important
 
 .house-container
+  margin-top: $section-padding
   @media (min-width: 768px)
     margin-bottom: ($section-padding + 20px)
-  margin-top: $section-padding
+    margin-top: ((250px - 122px) / 2) + 20px
 
 .contact-info
   @media (min-width: 768px)
-    height: 200px
+    height: 150px
     margin-top: 0
     margin-bottom: 0
   line-height: 1.7
   margin-top: $section-padding
+  color: #666
 
+  h2
+    color: #222
   h3
-    font-size: 1.1em
+    color: #666
+    font-size: 1em
+    font-weight: 600
     margin-top: 10px
 
   &:not(:last-child), &:first-child
@@ -342,12 +355,11 @@ a.thumbnail
   margin-bottom: $section-padding
 
 %grid-header
-  font-size: 1.75em
+  font-size: 1.5em
   font-weight: 600
   color: 2 * $primary
 
 .member-entry
-  min-height: 400px
   padding: $section-padding / 2
   margin-bottom: 30px
   font-family: $main-font
@@ -356,6 +368,8 @@ a.thumbnail
   text-align: left
   line-height: 1.15em
 
+  @media (min-width: 768px)
+    min-height: 375px
 
   > div:not(:last-child)
     margin-bottom: .85em
@@ -370,18 +384,41 @@ a.thumbnail
   text-overflow: ellipsis
   overflow: hidden
 
-  i
+  .fa
     margin-right: 3px
 
 .member-img
   height: 150px
   margin: 0 (-$section-padding / 2) ($section-padding / 2) !important
 
+.gallery-img
+  height: 180px
+  width: 100%
+
 .grid-content
   text-transform: uppercase
   font-size: 0.9em
+  font-weight: 600
+
+  a
+    font-weight: 400
 
   h2
     @extend %grid-header
 
+.sidebar
+  @media (min-width: 768px)
+    text-transform: uppercase
+    color: #666
+    font-size: 0.9em
+    font-weight: 600
+    font-family: $main-font
+    font-size: (1em / 1.3em) * 0.9em
 
+    a
+      font-weight: 400
+
+    h2
+      font-style: normal
+      font-weight: 600
+      margin-bottom: 10px
