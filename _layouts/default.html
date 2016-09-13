@@ -7,8 +7,8 @@ layout: compress
     {% include head.html %}
     <body>
         {% include header.html %}
-        <div class="banner cover" style="background-image:url('{{ page.banner.img | prepend: site.baseurl }}')">
-            <div class="overlay">
+        <div class="banner cover{% if page.banner.bottom-third %} bottom-third{% endif %}" style="background-image:url('{{ page.banner.img | prepend: site.baseurl }}')">
+            <div class="overlay{% if page.banner.light %} light{% endif %}">
                 <h1 class="banner-text">
                     {% if page.banner.text != null %}
                     <div class="banner-title">

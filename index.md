@@ -2,6 +2,8 @@
 layout: home
 banner:
     img: /assets/banners/banner.jpg
+    bottom-third: true
+    light: true
 title: Home | Acacia Fraternity UW
 gallery:
     -

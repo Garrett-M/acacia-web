@@ -56,6 +56,8 @@ a
 .cover
   background-position: 50% 33%
   background-size: cover
+  &.bottom-third
+    background-position: 50% 67%
 
 .banner
   width: 100%
@@ -70,6 +72,8 @@ a
   height: 100%
   width: 100%
   background: rgba(0,0,0,0.7)
+  &.light
+    background: rgba(0,0,0,0.5)
 
   text-align: center
   position: relative
@@ -430,3 +434,19 @@ a.thumbnail
       font-style: normal
       font-weight: 600
       margin-bottom: 10px
+
+#g-calendar
+  @extend .border
+
+  width: 100%
+  @media (min-width: 768px)
+    height: 500px
+  height: 70vw
+
+.legal
+  text-align: center
+  padding: $section-padding ($section-padding / 2) 0
+  font-size: 0.75em
+  font-weight: 600
+  text-transform: uppercase
+  color: #555
