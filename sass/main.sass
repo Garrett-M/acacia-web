@@ -368,6 +368,8 @@ a.thumbnail
 
   @media (min-width: 768px)
     min-height: 375px
+    overflow-y: scroll
+    overflow-x: hidden
 
   > div:not(:last-child)
     margin-bottom: .85em
@@ -386,7 +388,10 @@ a.thumbnail
     margin-right: 3px
 
 .member-img
-  height: 150px
+  @media (min-width: 768px)
+    height: 150px
+
+  height: 50vw
   margin: 0 (-$section-padding / 2) ($section-padding / 2) !important
 
 .gallery
