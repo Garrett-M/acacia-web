@@ -128,7 +128,6 @@ a
   text-align: justify
   line-height: 2em
 
-  margin-bottom: $section-padding / 2
   padding: $section-padding / 2 0
 
   h2
@@ -244,7 +243,6 @@ a
   bottom: 0
 
 a.thumbnail
-  max-height: 200px
   min-width: 100%
   &.active,&:focus,&:hover
     border-color: $secondary
@@ -391,8 +389,13 @@ a.thumbnail
   height: 150px
   margin: 0 (-$section-padding / 2) ($section-padding / 2) !important
 
+.gallery
+  margin-top: $section-padding / 2
+
 .gallery-img
-  height: 180px
+  @media (min-width: 768px)
+    height: 180px
+  height: 50vw
   width: 100%
 
 .grid-content

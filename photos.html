@@ -4,16 +4,26 @@ banner:
     img: /assets/banners/house.png
     text: Photo Gallery
 title: Photo Gallery | Acacia Fraternity UW
+imgs:
+    -
+        url: /assets/gallery/gameday.jpg
+        title: Gameday
+    -
+        url: /assets/gallery/mountain.jpg
+        title: Outdoors
+    -
+        url: /assets/gallery/working.jpg
+        title: Community Service
 ---
 
 <div class="content">
-    <div class="clearfix row">
-        {% loop_directory directory:assets/gallery/ iterator:image filter:*.* sort:descending %}
+    <div class="clearfix gallery row">
+        {% for image in page.imgs %}
             <div class="col-sm-4">
-                <a href="{{ image | prepend: '/assets/gallery/' | prepend: site.baseurl }}" class="thumbnail">
-                    <div class="gallery-img cover" style="background-image:url('{{ image | prepend: '/assets/gallery/' | prepend: site.baseurl }}')"></div>
+                <a title="{{ image.title }}" href="{{ image.url | prepend: site.baseurl }}" class="thumbnail">
+                    <div class="gallery-img cover" style="background-image:url('{{ image.url | prepend: site.baseurl }}')"></div>
                 </a>
             </div>
-        {% endloop_directory %}
+        {% endfor %}
     </div>
 </div>
