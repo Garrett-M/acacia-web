@@ -218,6 +218,7 @@ a
   font-variant: small-caps
 
   padding: $section-padding / 2 $section-padding $section-padding
+  margin-top: $section-padding / 2
 
   a
     text-decoration: none
@@ -439,6 +440,8 @@ a.thumbnail
   @extend .border
 
   width: 100%
+  margin-bottom: $section-padding / 2
+
   @media (min-width: 768px)
     height: 500px
   height: 70vw
@@ -450,3 +453,6 @@ a.thumbnail
   font-weight: 600
   text-transform: uppercase
   color: #555
+
+p:last-child
+  margin-bottom: 0
