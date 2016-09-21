@@ -5,7 +5,7 @@ banner:
     bottom-third: true
     light: true
 title: Home | Acacia Fraternity UW
-gallery:
+photos:
     -
         url: /assets/gallery/working.jpg
         title: Community Service
