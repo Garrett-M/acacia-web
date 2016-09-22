@@ -3,10 +3,10 @@
     <div {% if include.vertical == null %}class="row"{% endif %}>
     {% for img in page.photos | shift(3) %}
        <div {% if include.vertical == null %}class="col-sm-4"{% endif %}>
-            <a title="{{ img.title }}" href="{{ img.url | prepend: site.baseurl }}" class="thumbnail">
-                <img alt="{{ img.title }}" src="{{ img.url | prepend: site.baseurl }}"/>
-            </a>
-        </div>
+           <a title="{{ img.title }}" href="{{ img.url | prepend: site.baseurl }}" class="thumbnail">
+               <div class="gallery-img cover" style="background-image:url('{{ img.url | prepend: site.baseurl }}')"></div>
+           </a>
+       </div>
     {% endfor %}
     </div>
 </section>

@@ -2,7 +2,7 @@
 layout: guide-page
 title: About Us | Acacia Fraternity UW
 banner:
-    img: /assets/gallery/mountain.jpg
+    img: /assets/gallery/foundingfathers-1904.jpg
     text: About Acacia
 permalink: /about/
 nav:

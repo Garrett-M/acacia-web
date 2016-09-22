@@ -1,19 +1,19 @@
 ---
 layout: home
 banner:
-    img: /assets/banners/banner.jpg
+    img: /assets/gallery/banner.jpg
     bottom-third: true
     light: true
 title: Home | Acacia Fraternity UW
 photos:
     -
-        url: /assets/gallery/working.jpg
-        title: Community Service
-    -
         url: /assets/gallery/gameday.jpg
         title: Acacia Gameday
     -
-        url: /assets/gallery/mountain.jpg
+        url: /assets/gallery/working.jpg
+        title: Human Service
+    -
+        url: /assets/gallery/foundingfathers.jpg
         title: Outdoors
 ---
 
