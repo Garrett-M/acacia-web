@@ -10,8 +10,8 @@
         <div>{{ include.member.title }}</div>
         {% if include.member.year %}<div>{{ include.member.year }}</div>{% endif %}
         {% if include.member.major %}<div>{{ include.member.major }}</div>{% endif %}
-        {% if include.member.facebook %}<div class="facebook"><a href="{{ include.member.facebook }}"><i class="fa fa-facebook-square" aria-hidden="true"></i> Facebook</a></div>{% endif %}
-        {% if include.member.twitter %}<div class="twitter"><a href="{{ include.member.facebook }}"><i class="fa fa-twitter-square" aria-hidden="true"></i> Twitter</a></div>{% endif %}
+        {% if include.member.facebook %}<div class="facebook"><a target="_blank" href="{{ include.member.facebook }}"><i class="fa fa-facebook-square" aria-hidden="true"></i> Facebook</a></div>{% endif %}
+        {% if include.member.twitter %}<div class="twitter"><a target="_blank" href="{{ include.member.facebook }}"><i class="fa fa-twitter-square" aria-hidden="true"></i> Twitter</a></div>{% endif %}
         {% if include.member.email %}<div class="email"><a href="mailto:{{ include.member.email }}"><i class="fa fa-envelope-square" aria-hidden="true"></i> {{ include.member.email }}</a></div>{% endif %}
         {% if include.member.phone %}<div class="phone"><a href="tel:{{ include.member.phone-link }}"><i class="fa fa-phone-square" aria-hidden="true"></i> {{ include.member.phone }}</a></div>{% endif %}
     </div>

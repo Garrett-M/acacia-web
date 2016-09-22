@@ -10,6 +10,8 @@ contacts:
         title: President
         name: Austin Seely
         email: austinseely@live.com
+        phone: (509) 290-1057
+        phone-link: 'tel:15092901057'
     -
         title: Vice President
         name: Corey Rogers
@@ -61,8 +63,8 @@ contacts:
             <section class="col-sm-6 col-md-3 contact-info">
                 <h2>{{ entry.title }}</h2>
                 <h3>{{ entry.name }}</h3>
-                {% if entry.facebook %}<div class="facebook"><a href="{{ entry.facebook }}"><i class="fa fa-facebook-square" aria-hidden="true"></i> Facebook</a></div>{% endif %}
-                {% if entry.twitter%}<div class="twitter"><a href="{{ entry.twitter }}"><i class="fa fa-twitter-square" aria-hidden="true"></i> Twitter</a></div>{% endif %}
+                {% if entry.facebook %}<div class="facebook"><a target="_blank" href="{{ entry.facebook }}"><i class="fa fa-facebook-square" aria-hidden="true"></i> Facebook</a></div>{% endif %}
+                {% if entry.twitter%}<div class="twitter"><a target="_blank" href="{{ entry.twitter }}"><i class="fa fa-twitter-square" aria-hidden="true"></i> Twitter</a></div>{% endif %}
                 {% if entry.email %}<div class="email"><a href="mailto:{{ entry.email }}"><i class="fa fa-envelope-square" aria-hidden="true"></i> {{ entry.email }}</a></div>{% endif %}
                 {% if entry.phone %}<div class="phone"><a href="{{ entry.phone-link }}"><i class="fa fa-phone-square" aria-hidden="true"></i> {{ entry.phone }}</a></div>{% endif %}
             </section>
