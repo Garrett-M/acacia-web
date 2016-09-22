@@ -31,6 +31,15 @@ gallery:
     -
         url: /assets/gallery/working.jpg
         title: Community Service
+    -
+        url: /assets/gallery/foundingfathers-1904.jpg
+        title: Original Founding Fathers
+    -
+        url: /assets/gallery/foundingfathers.jpg
+        title: Recolonization Founding Fathers
+    -
+        url: /assets/gallery/working-2.jpg
+        title: Community Service
 description: "Official page of the Acacia Fraternity at the University of Washington"
 keywords: "Acacia UW University Washington Seattle Fraternity AKAK AK Brotherhood"
 baseurl: "/acacia-web"
